@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#first_level_cards {
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+    background-color: #0d5825;
+}
+
+#first_level_cards blockquote {
+    text-align: center;
+    font-size: 25px;
+    color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+#first_level_cards blockquote::before {
+    content: "❝";
+
+}
+
+#first_level_cards blockquote::after {
+    content: "❞";
+
+}
+
+#first_level_cards i {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+#first_level_cards img {
+    width: 150px;
+}
+
+#first_level_cards div:nth-of-type(1) {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-left: -150px;
+    transform: rotate(-15deg);
+    transition: top 0.4s ease;
+}
+
+#first_level_cards div:nth-of-type(1):hover {
+    top: 180px;
+}
+
+#first_level_cards div:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    top: 195px;
+    margin-left: -75px;
+    transform: rotate(-6deg);
+    transition: top 0.4s ease;
+}
+
+#first_level_cards div:nth-of-type(2):hover {
+    top: 175px;
+}
+
+#first_level_cards div:nth-of-type(3) {
+    position: absolute;
+    left: 50%;
+    top: 210px;
+    transform: rotate(15deg);
+    transition: top 0.4s ease;
+}
+
+#first_level_cards div:nth-of-type(3):hover {
+    top: 195px;
+}
+
+#second_level_cards {
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 300px;
+    margin-top: 24px;
+}
+
+#second_level_cards div:nth-of-type(1) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -80px;
+    margin-top: -80px;
+    background-color: #FE8888;
+}
+
+#second_level_cards div:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    background-color: #7D8AEA;
+    z-index: 2;
+}
+
+#second_level_cards div:nth-of-type(3) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #4DEF98;
+}
+
+#menu {
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+    margin-top: 24px;
+    background-color: #f5f5f5;
+}
+
+#menu>div {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: -45%;
+    width: 300px;
+    height: 100%;
+    padding: 48px 0;
+    background-color: #7E7E7E;
+    transition: left 0.4s ease;
+}
+
+#menu_here {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100px;
+    margin-top: 50px;
+    margin-right: 7px;
+}
+
+#menu_here>p {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    transform: rotate(90deg);
+    transform-origin: top right;
+    transition: opacity 0.4s ease;
+}
+
+#menu>div:hover #menu_here>p {
+    opacity: 0;
+}
+
+#menu>div:hover {
+    left: 0;
+}
+
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+#menu ul li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 18px;
+}
+
+#menu ul li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border: solid 1px black;
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    background-color: orange;
+    transform: rotate(45deg);
+}
+
+#menu ul li a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    color: orange;
+}
+
+#additional_block {
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+    margin-top: 24px;
+}
+
+@keyframes running {
+    0%  { background-color: red; transform: translate(0,0); }
+    25% { background-color: blue; transform: translate(0,500px); }
+    50% { background-color: green; transform: translate(500px,500px); }
+    75% { background-color: yellow; transform: translate(500px,0); }
+    100% { background-color: red; transform: translate(0,0); }
+}
+
+#additional_block div {
+    width: 100px;
+    height: 100px;
+    animation-name: running;
+    animation-duration: 5s;
+    animation-delay: 5ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+footer {
+    margin-top: 24px;
+    background-color: #ebebeb;
+    text-align: center;
+    padding: 12px;
+}
